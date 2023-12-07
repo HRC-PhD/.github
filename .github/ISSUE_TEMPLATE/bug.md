@@ -18,6 +18,5 @@ assignees: ""
 
 <!-- Criteria to meet so the issue can be closed. -->
 
-```[tasklist]
 ### Related Work Items
-```
+
