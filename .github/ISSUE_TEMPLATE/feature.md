@@ -10,10 +10,13 @@ assignees: ""
 
 <!-- Describe what this feature is about and why it is needed. -->
 
+### Acceptance Criteria
+
+<!-- How do we know whether the feature meets the needs of the user? -->
+
 ### Definition of Done
 
 <!-- How do we know when the feature is complete and of good quality? -->
 
-```[tasklist]
 ### Related Work Items
-```
+
