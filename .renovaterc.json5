@@ -1,0 +1,10 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: [
+    "github>HRC-PhD/.github//renovate/default-config.json",
+    ":automergeAll",
+  ],
+  "pre-commit": {
+    fileMatch: ["precommit/hrc-phd-hooks.yaml"],
+  },
+}

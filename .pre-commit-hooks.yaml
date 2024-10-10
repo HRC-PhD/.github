@@ -1,0 +1,8 @@
+---
+- id: hrc-phd-hooks
+  name: HRC-PhD hooks
+  description: Default pre-commit hooks for HRC-PhD repos
+  entry: ./precommit/run-hrc-phd-hooks.py
+  language: script
+  require_serial: true
+  verbose: true

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices",
+    "schedule:automergeWeekdays",
+    "schedule:monthly",
+    ":automergeBranch",
+    ":disableDependencyDashboard",
+    ":enablePreCommit",
+    ":label(renovate)",
+    ":prHourlyLimitNone"
+  ],
+  "commitMessageAction": "Renovate:",
+  "packageRules": [
+    {
+      "description": "Automatically merge, minor and patch-level updates",
+      "automerge": true,
+      "matchManagers": ["dockerfile", "github-actions", "pre-commit"],
+      "matchUpdateTypes": ["digest", "minor", "patch"]
+    },
+    {
+      "description": "Shorten commit titles",
+      "commitMessageTopic": "{{depName}}",
+      "matchManagers": ["github-actions", "pre-commit"]
+    },
+    {
+      "description": "Combine action artefact updates together",
+      "groupName": "artefacts",
+      "matchDepNames": [
+        "actions/deploy-pages",
+        "actions/download-artifact",
+        "actions/upload-artifact",
+        "actions/upload-pages-artifact"
+      ]
+    },
+    {
+      "description": "Only allow major updates",
+      "enabled": false,
+      "matchDepNames": ["renovatebot/pre-commit-hooks"],
+      "matchUpdateTypes": ["minor", "patch", "pin"]
+    },
+    {
+      "description": "Support loose versioning",
+      "matchDepNames": [
+        "cmhughes/latexindent.pl",
+        "shellcheck-py/shellcheck-py"
+      ],
+      "versioning": "loose"
+    }
+  ]
+}
