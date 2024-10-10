@@ -36,7 +36,8 @@ body:
       description: >-
         What is the expected behaviour once the problem is resolved? How will
         you know when the problem is fixed?
-      placeholder: e.g. "When the problem is resolved, the system should do x, y, z"
+      placeholder:
+        e.g. "When the problem is resolved, the system should do x, y, z"
     validations:
       required: false
   - type: textarea
@@ -44,7 +45,8 @@ body:
     attributes:
       label: Details
       description: Provide any additional information that may be useful.
-      placeholder: e.g. Additional context, links to documentation and diagrams, etc.
+      placeholder:
+        e.g. Additional context, links to documentation and diagrams, etc.
   - type: markdown
     attributes:
       value: |-

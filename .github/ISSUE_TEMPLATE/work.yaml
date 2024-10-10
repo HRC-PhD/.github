@@ -46,6 +46,7 @@ body:
     attributes:
       label: Details
       description: Provide any additional information that may be useful.
-      placeholder: e.g. Additional context, links to documentation and diagrams, etc.
+      placeholder:
+        e.g. Additional context, links to documentation and diagrams, etc.
     validations:
       required: false

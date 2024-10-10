@@ -7,9 +7,9 @@ body:
   - type: markdown
     attributes:
       value: >-
-        Create an epic, describe what the epic is about, define what the
-        epic must be done for the epic to be considered complete, and link
-        any other work items that need to be completed.
+        Create an epic, describe what the epic is about, define what the epic
+        must be done for the epic to be considered complete, and link any other
+        work items that need to be completed.
   - type: textarea
     id: short_description
     attributes:
@@ -23,11 +23,12 @@ body:
     attributes:
       label: Details
       description: Provide any additional information that may be useful.
-      placeholder: e.g. Additional context, links to documentation and diagrams, etc.
+      placeholder:
+        e.g. Additional context, links to documentation and diagrams, etc.
     validations:
       required: false
   - type: markdown
     attributes:
       value: >-
-        Add any other work items as sub-issues that need to be completed in order to complete
-        the epic.
+        Add any other work items as sub-issues that need to be completed in
+        order to complete the epic.
