@@ -1,0 +1,33 @@
+name: Epic
+description: Epics track large and complex work items
+type: Epic
+projects:
+  - HRC-PhD/1
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Create an epic, describe what the epic is about, define what the
+        epic must be done for the epic to be considered complete, and link
+        any other work items that need to be completed.
+  - type: textarea
+    id: short_description
+    attributes:
+      label: Short Description
+      description: Briefly summarise the epic.
+      placeholder: What is the overall aim of the epic?
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Provide any additional information that may be useful.
+      placeholder: e.g. Additional context, links to documentation and diagrams, etc.
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: >-
+        Add any other work items as sub-issues that need to be completed in order to complete
+        the epic.
