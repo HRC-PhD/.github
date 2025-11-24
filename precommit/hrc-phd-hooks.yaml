@@ -49,20 +49,20 @@ repos:
               }
             }
   - repo: https://github.com/AleksaC/hadolint-py
-    rev: v2.12.1b3
+    rev: v2.14.0
     hooks:
       - id: hadolint
         args:
           - --ignore=DL3008
   - repo: https://github.com/ansible-community/ansible-lint.git
-    rev: v25.5.0
+    rev: v25.9.2
     hooks:
       - id: ansible-lint
         args:
           - --exclude=.github
           - --exclude=docker-compose.yml
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.11.13
+    rev: v0.14.4
     hooks:
       - id: ruff
         args:
@@ -70,7 +70,7 @@ repos:
           - --fix
       - id: ruff-format
   - repo: https://github.com/crate-ci/typos
-    rev: v1.33.1
+    rev: v1.39.0
     hooks:
       - id: typos
         args:
@@ -87,7 +87,7 @@ repos:
     hooks:
       - id: forbid-tabs
   - repo: https://github.com/pappasam/toml-sort
-    rev: v0.24.2
+    rev: v0.24.3
     hooks:
       - id: toml-sort-fix
         args:
@@ -118,17 +118,17 @@ repos:
           - --fix=lf
       - id: trailing-whitespace
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.33.0
+    rev: 0.34.1
     hooks:
       - id: check-github-workflows
   - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: v0.10.0.1
+    rev: v0.11.0.1
     hooks:
       - id: shellcheck
         args:
           - --external-sources
           - --shell=bash
   - repo: https://github.com/rhysd/actionlint
-    rev: v1.7.7
+    rev: v1.7.8
     hooks:
       - id: actionlint
