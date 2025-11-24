@@ -1,0 +1,51 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: [
+    "config:best-practices",
+    "schedule:automergeWeekdays",
+    "schedule:monthly",
+    ":assignAndReview(hchughtai)",
+    ":automergeBranch",
+    ":automergeDigest",
+    ":automergeMinor",
+    ":automergePatch",
+    ":disableDependencyDashboard",
+    ":enablePreCommit",
+    ":label(renovate)",
+    ":maintainLockFilesMonthly",
+    ":prHourlyLimitNone",
+    ":prNotPending",
+  ],
+  commitMessageAction: "Renovate:",
+  "git-submodules": {
+    enabled: true,
+  },
+  packageRules: [
+    {
+      description: "Shorten commit titles",
+      commitMessageTopic: "{{depName}}",
+      matchManagers: ["github-actions", "pre-commit"],
+    },
+    {
+      description: "Combine action artefact updates together",
+      groupName: "artefacts",
+      matchDepNames: ["actions/download-artifact", "actions/upload-artifact"],
+    },
+    {
+      description: "Combine paddyroddy/.github updates together",
+      groupName: "paddyroddy/.github",
+      matchDepNames: ["paddyroddy/.github"],
+    },
+    {
+      description: "Only allow major updates",
+      enabled: false,
+      matchDepNames: ["renovatebot/pre-commit-hooks"],
+      matchUpdateTypes: ["minor", "patch", "pin"],
+    },
+    {
+      description: "Support loose versioning",
+      matchDepNames: ["cmhughes/latexindent.pl", "shellcheck-py/shellcheck-py"],
+      versioning: "loose",
+    },
+  ],
+}
