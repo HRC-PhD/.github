@@ -64,14 +64,14 @@ repos:
         args:
           - --ignore=DL3008
   - repo: https://github.com/ansible-community/ansible-lint.git
-    rev: v25.11.0
+    rev: v25.11.1
     hooks:
       - id: ansible-lint
         args:
           - --exclude=.github
           - --exclude=docker-compose.yml
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.14.6
+    rev: v0.14.7
     hooks:
       - id: ruff-check
         args:
@@ -79,7 +79,7 @@ repos:
           - --fix
       - id: ruff-format
   - repo: https://github.com/crate-ci/typos
-    rev: v1.39.2
+    rev: v1.40.0
     hooks:
       - id: typos
         args:
@@ -110,7 +110,7 @@ repos:
           - --spaces-indent-inline-array=4
           - --trailing-comma-inline-array
   - repo: https://github.com/rbubley/mirrors-prettier
-    rev: v3.6.2
+    rev: v3.7.3
     hooks:
       - id: prettier
         args:
